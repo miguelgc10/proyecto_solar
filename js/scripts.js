@@ -5,10 +5,10 @@ function calcularPaneles(consumo) {
 }
 
 function calcularAhorroMensual(consumo) {
-    return consumo * .5;
+    return Math.round(consumo * .5);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+function onDOMContentLoaded() {
     const consumoInput = document.getElementById('consumo');
 
     const resultadosSection = document.getElementById('resultados');
@@ -25,13 +25,15 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        errorMessage.classList.add('hidden');
-
         const paneles = calcularPaneles(consumoValue);
         const ahorroMensual = calcularAhorroMensual(consumoValue);
 
-        panelesNecesariosSpan.textContent = `${paneles}`;
-        ahorroKwhSpan.textContent = ahorroMensual;
+        panelesNecesariosSpan.textContent = String(paneles);
+        ahorroKwhSpan.textContent = String(ahorroMensual);
+
         resultadosSection.classList.remove('hidden');
+        errorMessage.classList.add('hidden');
     })
-});
+}
+
+document.addEventListener('DOMContentLoaded', onDOMContentLoaded);
