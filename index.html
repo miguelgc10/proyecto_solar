@@ -3,66 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Ahorro de Energia</title>
+    <title>SolarTech</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="header">
-        <h1>Calculadora de Ahorro de Energia</h1>
+        <h1>SolarTech - Transición A Energías Más Limpias</h1>
     </header>
-
-    <nav class="navbar">
+    <nav class="nav">
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Solar</a></li>
-            <li><a href="#">Eólica</a></li>
-            <li><a href="#">Hidrogeno Verde</a></li>
-            <li><a href="#">Geotermica</a></li>
-            <li><a href="#">Bioenergia</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="paneles.html">Paneles</a></li>
+            <li><a href="instalacion.html">Instalación</a></li>
+            <li><a href="calculo_energia.html">Cálculo de Energía</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
-
+    
     <div class="layout-grid">
-        <main class="main-content">
-
-        <section class="calculadora">
-            <h2>Calcula tu Ahorro de Energia</h2>
-            <form id="form_ahorro">
-                <div class="form-group">
-                    <label for="consumo">Consumo Energetico Actual (kwh):</label>
-                    <input type="number" id="consumo" name="consumo" min="0" required>
-                </div>
-                <div class="form-group">
-                    <label for="tipo-energia">Tipo Energia Renovable:</label>
-                    <select name="tipo-energia" id="tipo-energia" required>
-                        <option value="" disabled selected>Selecciona una opcion</option>
-                        <option value="solar">Solar</option>
-                        <option value="eolica">Eólica</option>
-                        <option value="hidrogeno">Hidrógeno Verde</option></select>
-                </div>
-
-                <button type="button" id="calcular-btn">Calcular Ahorro</button>
-            </form>
-
-        </section>
-
-        <!-- contenedor para mostrar los resultados del calculo -->
-        <section id="resultados" class="resultados hidden">
-            <h2>Resultado Ahorro Energetico</h2>
-            <div id="result-card">
-                <p><strong>Ahorro Energetico Estimado:</strong><span id="ahorro-kwh"></span>kwh</p>
-                <p><strong>Reduccion en Emisiones de CO₂:</strong><span id="ahorro-co2"></span>kg</p>
-                <p><strong>Ahorro Económico Estimado:</strong><span id="ahorro-usd"></span>USD</p>
-            </div>
-        </section>
+        
+        <main class="portafolio">
+            <section class="item">
+                <img src="img/solar_principal1.png" alt="" class="imagen-principal">
+                <h2>Proyecto Solar 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis eligendi reprehenderit ducimus voluptatum eaque quam eveniet, a rerum voluptas natus modi, nam excepturi, deleniti voluptatibus totam accusamus voluptates beatae deserunt.</p>
+            </section>
+            <section class="item">
+                <img src="img/hidrogenoverde.png" alt="" class="imagen-circular">
+                <h2>Hidrógeno verde</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo dolore doloremque est expedita quod porro quam odit, sunt fugiat non modi sed sapiente beatae cum provident omnis praesentium laboriosam nam.</p>
+            </section>
+            <section class="item">
+                <img src="img/parque_eolico.png" alt="" class="imagen-circular">
+                <h2>Proyecto Eólico Inovador</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel neque rem harum dolores animi similique consequuntur, fugit deleniti nesciunt obcaecati voluptates temporibus? Maxime ipsum tempora quia necessitatibus, libero illum sapiente.</p>
+            </section>
+            <section class="item">
+                <img src="img/rural.png" alt="" class="imagen-circular">
+                <h2>Transformación Productiva</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore ea distinctio consectetur nulla incidunt. Voluptates eos temporibus tempore doloribus quaerat similique aperiam natus eaque ut ab laborum, a animi earum.</p>
+            </section>
+            <section class="item">
+                <img src="img/solar_urbano1.png" alt="" class="imagen-galeria" width="20%">
+                <img src="img/solar_urbano2.png" alt="" class="imagen-galeria" width="20%">
+                <img src="img/solar_urbano3.png" alt="" class="imagen-galeria" width="20%">
+                <img src="img/solar_urbano4.png" alt="" class="imagen-galeria" width="20%">
+                <h2>Paneles Solares Urbanos</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente labore aliquam tenetur at sunt nulla eaque temporibus corporis autem, iste itaque voluptates ab fugiat recusandae rem voluptatibus nemo nesciunt asperiores?</p>
+            </section>
         </main>
     </div>
-
     <footer class="footer">
-        <p>Creado por Miguel Garcia - <a href="mailto:miguelgc090603@gmail.com" class="correo">miguelgc090603@gmail.com</a></p>
-        <p>Bootcamp Programcion 2025</p>
+        <p>Paneles Solares - Bootcamp Talento Tech 2025</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
