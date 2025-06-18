@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Ahorro de Energia</title>
+    <title>SolarTech</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calculadora.css">
 </head>
 <body>
 <header class="header">
-    <h1>Calculadora de Ahorro de Energia</h1>
+    <h1>SolarTech - Transición A Energías Más Limpias</h1>
 </header>
-
-<nav class="navbar">
+<nav class="nav">
     <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Solar</a></li>
-        <li><a href="#">Eólica</a></li>
-        <li><a href="#">Hidrogeno Verde</a></li>
-        <li><a href="#">Geotermica</a></li>
-        <li><a href="#">Bioenergia</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="paneles.html">Paneles</a></li>
+        <li><a href="instalacion.html">Instalación</a></li>
+        <li><a href="calculo_energia.html">Cálculo de Energía</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
     </ul>
 </nav>
 
@@ -30,8 +29,17 @@
             <form id="form_ahorro">
                 <div class="form-group">
                     <label for="consumo">Consumo mensual promedio del usuario (kWh):</label>
-                    <input type="number" id="consumo" name="consumo" min="0" placeholder="Ingrese su consumo mensual"
-                           required>
+                    <input
+                            type="number"
+                            id="consumo"
+                            name="consumo"
+                            min="0"
+                            placeholder="Ingrese su consumo mensual"
+                            required
+                    >
+                </div>
+                <div id="error-message" class="error-message hidden">
+                    <p>Por favor, ingresa un consumo válido mayor a cero.</p>
                 </div>
             </form>
 
@@ -49,9 +57,7 @@
 </div>
 
 <footer class="footer">
-    <p>Creado por Miguel Garcia - <a href="mailto:miguelgc090603@gmail.com" class="correo">miguelgc090603@gmail.com</a>
-    </p>
-    <p>Bootcamp Programcion 2025</p>
+    <p>Paneles Solares - Bootcamp Talento Tech 2025</p>
 </footer>
 
 <script src="js/scripts.js"></script>

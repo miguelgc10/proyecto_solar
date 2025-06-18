@@ -1,0 +1,144 @@
+/* ESTILOS DEL FORMULARIO DE LA CALCULADORA */
+.calculadora {
+    /* colro del fondo */
+    background-color: #ffffff;
+    padding: 20px;
+    /* borde circulr */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-group {
+    /* el espaciado que hay desde la parte exterior y el brde solo en el lado inferior */
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+label {
+    /* negrilla */
+    font-weight: bold;
+    /* el espaciado que hay desde la parte exterior y el brde solo en el lado inferior */
+    margin-bottom: 5px;
+}
+
+input[type="number"], select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+
+}
+
+button#calcular-btn {
+    /* color de fondo */
+    background-color: #005299;
+    /* color del texto */
+    color: white;
+    /* sin borde */
+    border: none;
+    /* el espaciado que hay entre el borde y el contenido el prier termino es el superior y lo inferior y el sugundo es izquierda y derecha */
+    padding: 10px 15px;
+    /* tamaño de letra */
+    font-size: 1rem;
+    /* cambio la forma del cursor a una mano par seleccionar */
+    cursor: pointer;
+    /* borde circular */
+    border-radius: 4px;
+    /* transicion del color del fondo */
+    transition: background-color 0.3s;
+}
+
+button#calcular-btn:hover {
+    /* color del dondo que se le va hacer la transicion */
+    background-color: #013664;
+}
+
+/* ESTILOS PARA LOS RESULTADOS */
+
+.resultados {
+    /* ancho */
+    width: 100%;
+    /* ancho maximo */
+    max-width: 600px;
+    /* color de fondo */
+    background-color: #ffffff;
+    /* espaciado que hay entre el borde y el contenido */
+    padding: 20px;
+    /* borde circular */
+    border-radius: 8px;
+    /* sombra */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+.resultados span {
+    margin-left: 5px;
+}
+
+.result-card {
+    /* color de fondo */
+    background-color: #f0f8ff;
+    /* el espaciado que hay entre el borde y el contenido */
+    padding: 15px;
+    /* borde circular */
+    border-radius: 8px;
+    /* sombra */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* alineacion del texto a la izquierda*/
+    text-align: left;
+}
+
+.hidden {
+    /* que no se muestre este contenido */
+    display: none;
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .calculadora, .resultados {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header, .footer {
+        padding: 15px;
+    }
+
+    button#calcular-btn {
+        width: 100%;
+    }
+}
+
+.error-message {
+    background-color: #fee;
+    border: 1px solid #fcc;
+    border-radius: 4px;
+    padding: 12px;
+    margin: 10px 0;
+    color: #c33;
+    font-size: 14px;
+}
+
+.error-message p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.hidden {
+    display: none;
+}

@@ -14,15 +14,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const resultadosSection = document.getElementById('resultados');
     const panelesNecesariosSpan = document.getElementById('paneles-necesarios');
     const ahorroKwhSpan = document.getElementById('ahorro-kwh');
+    const errorMessage = document.getElementById('error-message');
 
     consumoInput.addEventListener('input', function (inputEvent) {
         const consumoValue = parseFloat(inputEvent.target.value);
 
         if (isNaN(consumoValue) || consumoValue <= 0) {
             resultadosSection.classList.add('hidden');
-
+            errorMessage.classList.remove('hidden');
             return;
         }
+
+        errorMessage.classList.add('hidden');
 
         const paneles = calcularPaneles(consumoValue);
         const ahorroMensual = calcularAhorroMensual(consumoValue);
