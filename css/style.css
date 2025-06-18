@@ -1,0 +1,230 @@
+body{
+    /* tipo de letra */
+    font-family: Arial, Helvetica, sans-serif;
+    /* color de fondo */
+    background-color: #e6f7ff;
+    /* color de texto */
+    color: #333;
+    /* espaciado que hay desde la parte exterior y el borde */
+    margin: 0;
+    /* espaciado que hay entre el borde y el contenido */
+    padding: 0;
+    /* interlineado */
+    line-height: 1.6;
+    /* disposicion del yexto */
+    display: flex;
+    flex-direction: column;
+    /* el minimo de altura sea el total de la pantalla del navegador */
+    min-height: 100vh;
+}
+
+.header{
+    background-color: #006bb3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.navbar{
+    background-color: #005299;
+    padding: 15px;
+    /* fijar el menu */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul{
+    display: flex;
+    /* no tenga estilos de lista */
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    /* se justifique el contenido de acuerdo al espacio del contenido */
+    justify-content: space-evenly;
+}
+
+.navbar ul li{
+    /* espaciado que hay desdee la parte exterior y el borde en donde el primer termino es de superior e inferior y el segundo es de la izquierda y derecha */
+    margin: 0 15px;
+
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    /* negrilla */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover{
+    color: black;
+}
+
+.layout-grid{
+    /* disposicion sea flexible */
+    display: flex;
+    /* flexible */
+    flex: 1;
+    /* espaciado que hay entre el borde y contenido */
+    padding: 20px;
+}
+
+.main-content{
+    /* ancho */
+    width: 100%;
+    /* dispaosicion sea flexible */
+    display: flex;
+    /* flexible y por columnas */
+    flex-direction: column;
+    /* la alineacion de los items este centrada */
+    align-items: center;
+    /* el espaciado  */
+    gap: 20px;
+}
+
+/* ESTILOS DEL FORMULARIO DE LA CALCULADORA */
+.calculadora{
+    /* colro del fondo */
+    background-color: #ffffff;
+    padding: 20px;
+    /* borde circulr */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-group{
+    /* el espaciado que hay desde la parte exterior y el brde solo en el lado inferior */
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+label{
+    /* negrilla */
+    font-weight: bold;
+    /* el espaciado que hay desde la parte exterior y el brde solo en el lado inferior */
+    margin-bottom: 5px;
+}
+
+input[type="number"],select{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+
+}
+
+button#calcular-btn{
+    /* color de fondo */
+    background-color: #005299;
+    /* color del texto */
+    color: white;
+    /* sin borde */
+    border: none;
+    /* el espaciado que hay entre el borde y el contenido el prier termino es el superior y lo inferior y el sugundo es izquierda y derecha */
+    padding: 10px 15px;
+    /* tamaño de letra */
+    font-size: 1rem;
+    /* cambio la forma del cursor a una mano par seleccionar */
+    cursor: pointer;
+    /* borde circular */
+    border-radius: 4px;
+    /* transicion del color del fondo */
+    transition: background-color 0.3s;
+}
+
+button#calcular-btn:hover{
+    /* color del dondo que se le va hacer la transicion */
+    background-color: #013664;
+}
+
+/* ESTILOS PARA LOS RESULTADOS */
+
+.resultados{
+    /* ancho */
+    width: 100%;
+    /* ancho maximo */
+    max-width: 600px;
+    /* color de fondo */
+    background-color: #ffffff;
+    /* espaciado que hay entre el borde y el contenido */
+    padding: 20px;
+    /* borde circular */
+    border-radius: 8px;
+    /* sombra */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+.resultados span{
+    margin-left: 5px;
+}
+
+.result-card{
+    /* color de fondo */
+    background-color: #f0f8ff;
+    /* el espaciado que hay entre el borde y el contenido */
+    padding: 15px;
+    /* borde circular */
+    border-radius: 8px;
+    /* sombra */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* alineacion del texto a la izquierda*/
+    text-align: left;
+}
+
+.hidden{
+    /* que no se muestre este contenido */
+    display: none;
+    opacity: 0;
+}
+
+.footer{
+    background-color: #006bb3;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+.correo{
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.correo:hover{
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .main-content {
+            padding: 10px;
+        }
+
+    .calculadora, .resultados {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header, .footer {
+        padding: 15px;
+    }
+
+    button#calcular-btn {
+        width: 100%;
+    }
+}
+
